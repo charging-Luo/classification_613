@@ -1,0 +1,18 @@
+train:
+    epoch: 50
+    batch_size: 8
+    num_workers: 4
+    print_interval: 25
+    optimizer:
+        lr: 5.0e-4
+        weight_decay: 0.0005
+    lr_schedule:
+        name: 'multi_step'
+        milestones: [25, 35, 45]  # [35, 65, 85, 100]
+    warmup_epoch: 0
+    resume:
+val:
+    batch_size: 8
+    num_workers: 4
+    print_interval: 25
+opt-level: 01

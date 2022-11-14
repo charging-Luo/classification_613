@@ -1,0 +1,19 @@
+train:
+    epoch: 50
+    batch_size: 16
+    num_workers: 4
+    val_interval: 25
+    print_interval: 25
+    optimizer:
+        lr: 3.0e-4
+        weight_decay: 0.0005
+    lr_schedule:
+        name: 'ReduceLROnPlateau'
+        milestones: [15, 20, 35, 40]
+    warmup_epoch: 0
+    resume:
+val:
+    batch_size: 8
+    num_workers: 4
+    print_interval: 25
+opt-level: 01
